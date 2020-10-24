@@ -27,5 +27,12 @@ namespace HashTable
             int count = map.GetValue(WordToCheck);
             return count;
         }
+            public void RemoveWord(string wordToRemove)
+            {
+                MyMappingNode<string, int> map = myMap;
+                map.RemoveValue(wordToRemove);
+                Console.WriteLine($"Frequency of \"{wordToRemove}\" after removal is {map.GetValue(wordToRemove)} ");
+            }
+        
     }
 }
